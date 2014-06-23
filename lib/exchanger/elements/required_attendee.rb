@@ -1,6 +1,6 @@
 module Exchanger
-    class RequiredAttendee < Element
 
+  class RequiredAttendee < Element
     element :attendee, :type => [Attendee]
 
     def tag_name
