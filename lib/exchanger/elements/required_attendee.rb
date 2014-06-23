@@ -1,8 +1,10 @@
-class RequiredAttendee < Element
+module Exchanger
+    class RequiredAttendee < Element
 
-  element :attendee, :type => [Attendee]
+    element :attendee, :type => [Attendee]
 
-  def tag_name
-    "RequiredAttendees"
+    def tag_name
+      "RequiredAttendees"
+    end
   end
 end
