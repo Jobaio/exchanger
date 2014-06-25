@@ -60,5 +60,15 @@ module Exchanger
       CreateItem.run(:folder_id => parent_folder_id.id, :items => [self],
                      :send_meeting_invitations => "SendToAllAndSaveCopy")
     end
+
+
+    # override to add in send_meeting_cancellations attribute
+    def delete
+      if DeleteItem.run(:item_ids => [id], :send_meeting_cancellations => "SendToAllAndSaveCopy")
+        true
+      else
+        false
+      end
+    end
   end
 end
