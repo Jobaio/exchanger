@@ -27,8 +27,8 @@ module Exchanger
     element :calendar_item_type
     element :my_response_type
     element :organizer, :type => SingleRecipient
-    element :required_attendees, :type => [Attendee]
-    element :optional_attendees, :type => [Attendee]
+    element :required_attendees, :type => RequiredAttendee
+    element :optional_attendees, :type => Attendee
     element :resources, :type => [Attendee]
     # Conflicting and adjacent meetings
     element :conflicting_meeting_count, :type => Integer
